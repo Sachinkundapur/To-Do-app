@@ -1,0 +1,16 @@
+<style>
+  body {
+    background-color: lightgray;
+  }
+
+  .back {
+    background-color: cadetblue;
+  }
+</style>
+
+<p style="color: brown">are you sure you wnant to delete ? {{item}}</p>
+<a href="{% url 'list' %}">cancel</a>
+<form method="POST" action="">
+  {% csrf_token %}
+  <input class="back" type="submit" name="delete" />
+</form>
